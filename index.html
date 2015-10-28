@@ -417,22 +417,7 @@
                     .group(rcodeByTotal)
                     .colors(['#AAAAAA', "rgb(49,163,84)"]) //'#CB181D'
                     .colorDomain([0, 2])
-                    .colorAccessor(function (d) {
-                        if(d>0){
-                            return 1;
-                        } else {
-                            return 0;
-                        }
-                    })
-                    
-                    .on("filtered", getFiltersValues)
-                    .colorAccessor(function (d) {
-                        if(d>0){
-                            return 1;
-                        } else {
-                            return 0;
-                        }
-                    })
+ 
                     .overlayGeoJson(governJSON.features, "Governorates", function (d) {
                         return d.properties.adm1_code;
                     })
